@@ -1479,6 +1479,7 @@ private:
             int funcname_init = 0;
             int index = 0;
             vector<string> parameters = func_node->get_parameters();
+
             for (const auto &param : parameters)
             {
                 int reAssignVal;
@@ -1587,15 +1588,14 @@ string readFile(const string &fileName)
 int main(int argc, char *argv[])
 {
 
-    // if (argc != 2)
-    // {
-    //     cerr << "Usage: " << argv[0] << " <filename>" << endl;
-    //     return 1;
-    // }
+    if (argc != 2)
+    {
+        cerr << "Usage: " << argv[0] << " <filename>" << endl;
+        return 1;
+    }
 
-    // // Extract the filename from command-line arguments
-    // string fileName = argv[1];
-    string fileName = "/Users/vietpham/Desktop/PythonCodeEditor/code_editor/server/test.py";
+    // Extract the filename from command-line arguments
+    string fileName = argv[1];
     string input = readFile(fileName);
 
     // Create a symbol table
@@ -2221,7 +2221,6 @@ int main(int argc, char *argv[])
                                 cerr << "Error parsing line: " << line << endl;
                                 return 1;
                             }
-
                             // Evaluate the AST with the symbol table
                             Interpreter::evaluate(ast, symbolTable);
 
@@ -2242,7 +2241,6 @@ int main(int argc, char *argv[])
                     cerr << "Error parsing line: " << line << endl;
                     return 1;
                 }
-
                 // Evaluate the AST with the symbol table
                 Interpreter::evaluate(ast, symbolTable);
                 // symbolTable.printGlobalVars();

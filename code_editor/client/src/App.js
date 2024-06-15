@@ -1,5 +1,4 @@
 import CodeEditor from "./components/CodeEditor";
-import Output from "./components/Output";
 import Header from "./components/Header";
 import Appendix from "./components/Appendix";
 
@@ -8,10 +7,7 @@ function App() {
     <div className="App">
       <Header />
       <div className="content-container">
-        <div className="main-content">
-          <CodeEditor />
-          <Output />
-        </div>
+        <CodeEditor />
         <Appendix />
         <p className="copy-right">
           © 2024 @LePoisson104 online-python-code-editor
