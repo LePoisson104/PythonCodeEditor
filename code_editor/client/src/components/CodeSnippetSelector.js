@@ -4,6 +4,7 @@ const CodeSnippetSelector = ({ onSelect }) => {
   const [open, setOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState("Select Snippet: ");
   const dropDownRef = useRef();
+  const menuRef = useRef();
 
   useEffect(() => {
     const handler = (e) => {
@@ -36,7 +37,7 @@ const CodeSnippetSelector = ({ onSelect }) => {
         <span className="selected">{selectedValue}</span>
         <div className={`caret ${open ? "rotate" : null}`}></div>
       </div>
-      <ul className={`menu ${open ? "active" : "inactive"}`}>
+      <ul className={`menu ${open ? "active" : "inactive"}`} ref={menuRef}>
         <li
           className={`${
             selectedValue === "Simple Operations" ? "current-select" : null

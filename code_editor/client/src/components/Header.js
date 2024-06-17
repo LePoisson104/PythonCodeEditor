@@ -3,6 +3,7 @@ const Header = () => {
     <div className="side-bar">
       <header>
         <h1>Online Python Code Editor </h1>
+        <div className="line"></div>
         <p>@LePoisson104</p>
         <div className="link-container">
           <a

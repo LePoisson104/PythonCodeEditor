@@ -9,9 +9,6 @@ function App() {
       <div className="content-container">
         <CodeEditor />
         <Appendix />
-        <p className="copy-right">
-          © 2024 @LePoisson104 online-python-code-editor
-        </p>
       </div>
     </div>
   );
