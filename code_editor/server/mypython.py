@@ -1,6 +1,5 @@
 #Functions with nested if/else
-
-a = 10
+a = 12
 b = 16
 x = 3
 y = 9
