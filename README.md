@@ -17,7 +17,10 @@
 
 - https://pythoncodeeditor-1.onrender.com
 
+## Instructions:
+
 ```bash
+# Clone this repo
 git clone https://github.com/LePoisson104/PythonCodeEditor.git
 ```
 
